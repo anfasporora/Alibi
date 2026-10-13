@@ -1,0 +1,29 @@
+:root { --ink:#16202b; --board:#1f2c3a; --slip:#ece6d6; --slip-ink:#2a2620; --red:#b8322a; --mute:#9fb0c0; --line:#34465a; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--ink); color:#e6edf3; font:17px/1.6 Georgia,"Times New Roman",serif; }
+main { max-width:760px; margin:0 auto; padding:32px 20px 80px; }
+h1 { font-size:2.4rem; line-height:1.1; margin:0 0 12px; letter-spacing:-.01em; }
+h2 { font-size:1.15rem; margin:36px 0 12px; color:var(--mute); font-weight:normal; }
+.type { font-family:"Courier New",monospace; }
+.bar { display:flex; gap:16px; flex-wrap:wrap; color:var(--mute); font-size:.9rem; margin:14px 0 0; }
+.slip { background:var(--slip); color:var(--slip-ink); padding:10px 14px; margin:0 0 10px; font-family:"Courier New",monospace; font-size:.92rem; line-height:1.5; border-left:6px solid var(--red); }
+.slip b { display:inline-block; min-width:7.5em; }
+.suspect { background:var(--board); border:1px solid var(--line); padding:18px; margin:0 0 14px; }
+.suspect.out { opacity:.45; }
+.suspect.culprit { border-color:var(--red); box-shadow:0 0 0 2px var(--red); }
+.name { font-size:1.2rem; font-weight:bold; }
+.role { color:var(--mute); font-size:.9rem; }
+blockquote { margin:10px 0 14px; padding-left:14px; border-left:2px solid var(--line); font-style:italic; }
+button { font:inherit; cursor:pointer; padding:8px 16px; border:1px solid var(--red); background:transparent; color:#fff; }
+button:hover { background:var(--red); }
+button.ghost { border-color:var(--line); color:var(--mute); }
+button.ghost:hover { background:var(--line); color:#fff; }
+button:focus-visible { outline:3px solid #f2c94c; outline-offset:2px; }
+button:disabled { opacity:.4; cursor:default; }
+.hint { color:#f2c94c; margin:8px 0; }
+.verdict { padding:20px; border:2px solid var(--red); margin-top:28px; }
+.verdict h3 { margin:0 0 6px; font-size:1.5rem; }
+.score { font-size:2.6rem; line-height:1; margin:6px 0; }
+.note { margin:10px 0; } .note b { color:#fff; }
+.msg { color:#ff8f87; margin:10px 0; }
+@media (prefers-reduced-motion:no-preference) { .verdict { animation:in .35s ease-out; } @keyframes in { from { opacity:0; transform:translateY(8px) } } }
